@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Contact Us</title><link rel="stylesheet" href="style.css" /></head>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Sediba Sa Bophelo Prayer Tower</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
   <header>
-    <h1>Contact Us</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="ministries.html">Ministries</a></li>
         <li><a href="events.html">News & Events</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
       </ul>
     </nav>
+    <h1>Contact Us</h1>
   </header>
-  <main>
+  <main class="section-card">
     <h2>Get In Touch</h2>
     <p>We would love to hear from you! Reach us via:</p>
     <ul>
       <li><strong>Phone:</strong> +27 79 541 9482</li>
       <li><strong>Email:</strong> sedibasabophelo4@gmail.com</li>
-      <li><strong>Address:</strong> Makgophong,Zebediela,Limpopo, South Africa</li>
+      <li><strong>Address:</strong> Makgophong, Zebediela, Limpopo, South Africa</li>
     </ul>
     <img src="images/IMG-20250609-WA0007.jpg" alt="People shaking hands at church">
   </main>
@@ -31,7 +36,7 @@
       <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
-    <div id="successMessage" style="display:none; color:green; text-align:center; margin-top:15px;">
+    <div id="successMessage">
       Message sent!
     </div>
   </section>
@@ -45,5 +50,6 @@
       this.reset();
     });
   </script>
+  <script src="script.js"></script>
 </body>
 </html>
