@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yourusername.github.io/reponame/</loc>
-    <lastmod>2025-07-31</lastmod>
-    <priority>1.0</priority>
+    <loc>https://Willykgafela.github.io/sediba-website/index.html</loc>
   </url>
   <url>
-    <loc>https://yourusername.github.io/reponame/about.html</loc>
-    <priority>0.8</priority>
+    <loc>https://Willykgafela.github.io/sediba-website/about.html</loc>
   </url>
   <url>
-    <loc>https://yourusername.github.io/reponame/ministries.html</loc>
-    <priority>0.8</priority>
+    <loc>https://Willykgafela.github.io/sediba-website/ministries.html</loc>
   </url>
   <url>
-    <loc>https://yourusername.github.io/reponame/contact.html</loc>
-    <priority>0.7</priority>
+    <loc>https://Willykgafela.github.io/sediba-website/events.html</loc>
+  </url>
+  <url>
+    <loc>https://Willykgafela.github.io/sediba-website/contact.html</loc>
   </url>
 </urlset>
