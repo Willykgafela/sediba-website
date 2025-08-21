@@ -15,28 +15,52 @@
         <li><a href="ministries.html">Ministries</a></li>
         <li><a href="events.html" class="active">News & Events</a></li>
         <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="offering.html">Offering & Partnership</a></li>
       </ul>
     </nav>
     <h1>News & Events</h1>
   </header>
+
   <section class="section-card">
     <h2>Upcoming Events</h2>
     <ul>
-      <li><strong>Sunday Service:</strong> Every Sunday at 10:30AM</li>
-      <li><strong>State of Church Address:</strong> August 16, 2025</li>
+      <li><strong>Sunday Service:</strong> Every Sunday @ 10:30AM</li>
+      <li><strong>State of Church Address:</strong> October 09, 2025 @12:00PM-15:00PM</li>
+      <li><strong>Bible study:</strong> Every Friday @ 15:00PM-16:00PM</li>
     </ul>
     <p>Stay tuned for more exciting events and opportunities to connect, serve, and grow together!</p>
   </section>
+
   <section class="section-card">
-    <h2>Event Gallery</h2>
+    <h2>Event Gallery - Pictures</h2>
     <div class="gallery">
-      <img src="images/donate sanitary pads - Made with PosterMyWall.jpg" alt="Donation Event" />
-      <img src="images/state of church.jpg" alt="State of Church Event" />
+      <img src="images/donate sanitary pads.jpg" alt="Donation Event" onclick="openLightbox(this)">
+      <img src="images/state of church.jpg" alt="State of Church Event" onclick="openLightbox(this)">
+      <img src="images/fund raising.jpg" alt="Church building fundraising" onclick="openLightbox(this)">
+      <img src="images/Bible study.jpeg" alt="Bible Study" onclick="openLightbox(this)">
     </div>
   </section>
+
+  <section class="section-card">
+    <h2>Event Gallery - Videos</h2>
+    <div class="gallery" style="flex-wrap: wrap; gap: 28px; justify-content: center;">
+      <video width="350" height="200" controls>
+        <source src="videos/home cell.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+   
+  </div>
+
   <footer>
     <p>&copy; 2025 Sediba Sa Bophelo Prayer Tower</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

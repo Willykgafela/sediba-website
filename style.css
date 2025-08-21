@@ -219,47 +219,54 @@ ul li:last-child {
   max-width: 420px;
   margin: 40px auto 0 auto;
   padding: 28px 22px;
-  background: #f8f9fa;
-  border-radius: 14px;
-  box-shadow: 0 2px 18px rgba(30,61,89,0.10);
+  background: linear-gradient(120deg, #f8fafc 80%, #f9d923 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30,61,89,0.13);
   display: flex;
   flex-direction: column;
   gap: 18px;
+  border: 2px solid #f9d923;
 }
 
 #contactForm input,
 #contactForm textarea {
-  padding: 12px 14px;
-  border: 1.5px solid #ccc;
-  border-radius: 7px;
+  padding: 14px 16px;
+  border: 2px solid #e0e7ff;
+  border-radius: 8px;
   font-size: 1.08rem;
   font-family: inherit;
   resize: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(30,61,89,0.04);
 }
 
 #contactForm input:focus,
 #contactForm textarea:focus {
   border-color: #f9d923;
   outline: none;
+  box-shadow: 0 0 0 2px #f9d92333;
 }
 
 #contactForm button {
   background: linear-gradient(90deg, #f9d923 60%, #ff7b54 100%);
   color: #1e3d59;
   border: none;
-  border-radius: 7px;
-  padding: 13px;
+  border-radius: 8px;
+  padding: 14px;
   font-size: 1.13rem;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(30,61,89,0.10);
+  letter-spacing: 1px;
 }
 
 #contactForm button:hover {
   background: #fff;
   color: #1e3d59;
   transform: translateY(-2px) scale(1.04);
+  border: 2px solid #f9d923;
 }
 
 #successMessage {
@@ -269,6 +276,60 @@ ul li:last-child {
   margin-top: 18px;
   text-align: center;
   display: none;
+}
+
+#testimonyForm {
+  max-width: 420px;
+  margin: 32px auto 0 auto;
+  padding: 28px 22px;
+  background: linear-gradient(120deg, #f8fafc 80%, #f9d923 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30,61,89,0.13);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 2px solid #f9d923;
+}
+
+#testimonyForm input,
+#testimonyForm textarea {
+  padding: 14px 16px;
+  border: 2px solid #e0e7ff;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-family: inherit;
+  resize: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(30,61,89,0.04);
+}
+
+#testimonyForm input:focus,
+#testimonyForm textarea:focus {
+  border-color: #f9d923;
+  outline: none;
+  box-shadow: 0 0 0 2px #f9d92333;
+}
+
+#testimonyForm button {
+  background: linear-gradient(90deg, #f9d923 60%, #ff7b54 100%);
+  color: #1e3d59;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 1.13rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(30,61,89,0.10);
+  letter-spacing: 1px;
+}
+
+#testimonyForm button:hover {
+  background: #fff;
+  color: #1e3d59;
+  transform: translateY(-2px) scale(1.04);
+  border: 2px solid #f9d923;
 }
 
 @media (max-width: 700px) {
@@ -290,4 +351,131 @@ ul li:last-child {
     padding: 18px 4px 18px 4px;
     margin: 12px auto;
   }
+}
+
+/* General reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  padding: 0;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 10px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: #f9d923;
+  color: #222;
+  border-radius: 6px;
+}
+
+.section-card {
+  background: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+video {
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  border: 2px solid #f9d923;
+  background: #fff;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+
+  /* Center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+  margin: auto;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  min-height: calc(100vh - 150px); /* full screen minus header/footer */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.section-card,
+#welcome,
+#contactForm,
+#testimonyForm {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }

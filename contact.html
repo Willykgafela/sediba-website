@@ -5,6 +5,8 @@
   <title>Contact Us | Sediba Sa Bophelo Prayer Tower</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <header>
@@ -15,41 +17,88 @@
         <li><a href="ministries.html">Ministries</a></li>
         <li><a href="events.html">News & Events</a></li>
         <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li><a href="offering.html" >Offering & Partnership</a></li>
       </ul>
     </nav>
     <h1>Contact Us</h1>
   </header>
+
   <main class="section-card">
     <h2>Get In Touch</h2>
     <p>We would love to hear from you! Reach us via:</p>
-    <ul>
-      <li><strong>Phone:</strong> +27 79 541 9482</li>
-      <li><strong>Email:</strong> sedibasabophelo4@gmail.com</li>
-      <li><strong>Address:</strong> Makgophong, Zebediela, Limpopo, South Africa</li>
+    <ul style="text-align:left; max-width:400px; margin:0 auto;">
+      <li>
+        <i class="fab fa-whatsapp" style="color:#25d366;"></i>
+        <strong>WhatsApp:</strong>
+        <a href="https://wa.me/27795419482" target="_blank" style="color:#25d366;">079 541 9482</a>
+      </li>
+      <li>
+        <i class="fas fa-phone" style="color:#1e3d59;"></i>
+        <strong>Prayers:</strong>
+        <a href="tel:+27799107010">079 910 7010</a> /
+        <a href="tel:+27796426893">079 642 6893</a>
+      </li>
+      <li>
+        <i class="fab fa-facebook" style="color:#1877f3;"></i>
+        <strong>Facebook:</strong>
+        <a href="https://facebook.com/sedibasabopheloprayertower" target="_blank">sediba sa bophelo prayer tower</a>
+      </li>
+      <li>
+        <i class="fas fa-envelope" style="color:#f9d923;"></i>
+        <strong>Email:</strong>
+        <a href="mailto:sedibasabophelo4@gmail.com">sedibasabophelo4@gmail.com</a>
+      </li>
+      <li>
+        <i class="fas fa-map-marker-alt" style="color:#ff7b54;"></i>
+        <strong>Address:</strong> Makgophong, Zebediela, Limpopo, South Africa
+      </li>
     </ul>
     <img src="images/IMG-20250609-WA0007.jpg" alt="People shaking hands at church">
   </main>
-  <section>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
+
+  <!-- Share Testimonies / Prayer Request Section -->
+  <section class="section-card">
+    <h2>Share Your Testimony / Prayer Request</h2>
+    <p>We would be honored to pray with you and hear what God has done in your life.</p>
+
+    <!-- Formspree Form -->
+    <form id="testimonyForm" action="https://formspree.io/f/xdkdrvrn" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Testimony / Prayer Request" rows="5" required></textarea>
       <button type="submit">Send</button>
     </form>
-    <div id="successMessage">
-      Message sent!
+
+    <!-- Success message (Formspree handles redirect, optional JS fallback) -->
+    <div id="successMessage" style="display:none; color:green; margin-top:10px;">
+      Thank you! Your request has been sent.
     </div>
   </section>
+
   <footer>
     <p>&copy; 2025 Sediba Sa Bophelo Prayer Tower</p>
   </footer>
+
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    // Optional: Show success message without leaving page (Formspree redirect-free setup)
+    document.getElementById('testimonyForm').addEventListener('submit', function(event) {
       event.preventDefault();
-      document.getElementById('successMessage').style.display = 'block';
-      this.reset();
+      const form = this;
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById('successMessage').style.display = 'block';
+          form.reset();
+        } else {
+          alert("Oops! Something went wrong. Please try again.");
+        }
+      }).catch(error => {
+        alert("Error sending request. Please check your connection.");
+      });
     });
   </script>
-  <script src="script.js"></script>
 </body>
 </html>
