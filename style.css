@@ -162,6 +162,48 @@ footer {
   margin-top: 40px;
 }
 
+.footer-content {
+  background: transparent; /* Ensures gradient shows through */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 10px 0 10px;
+  color: #fff;
+}
+
+.footer-content h4,
+.footer-content p,
+.footer-content a {
+  color: #fff;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 6px;
+  font-size: 1rem;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+  color: #f9d923;
+}
+
+.footer-social a {
+  font-size: 1.5rem;
+  margin-right: 12px;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover {
+  color: #f9d923;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -618,14 +660,14 @@ main {
 .footer-social a {
   font-size: 1.5rem;
   margin-right: 12px;
-  color: #fff;
+  color: #fdfeff;
   transition: color 0.2s;
 }
 .footer-social a:hover {
   color: #f9d923;
 }
 .footer-nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   margin-right: 6px;
   font-size: 1rem;
