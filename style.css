@@ -8,6 +8,7 @@ body {
   background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
   color: #222;
   min-height: 100vh;
+  font-size: 16px; /* Ensures readable base font size */
 }
 
 header {
@@ -194,7 +195,8 @@ footer {
 
 .footer-content > div {
   flex: 1 1 180px;
-  min-width: 180px;
+  min-width: 0;
+  max-width: 100%;
   margin-bottom: 18px;
 }
 
@@ -242,8 +244,10 @@ footer {
 }
 
 .gallery img {
-  width: 320px;
-  height: 210px;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  aspect-ratio: 16/10;
   object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.13);
@@ -252,10 +256,15 @@ footer {
   background: #fff;
 }
 
-.gallery img:hover {
-  transform: scale(1.06) rotate(-1deg);
-  box-shadow: 0 6px 24px rgba(30,61,89,0.18);
-  border-color: #ff7b54;
+/* For videos in galleries */
+.gallery video {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  border: 2px solid #f9d923;
+  background: #fff;
 }
 
 main img, section img {
@@ -415,9 +424,9 @@ ul li:last-child {
   border-radius: 16px;
   box-shadow: 0 2px 18px rgba(30,61,89,0.07);
   max-width: 340px;
-  min-width: 260px;
+  min-width: 220px;
   flex: 1 1 300px;
-  padding: 24px 18px 18px 18px;
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -468,10 +477,10 @@ ul li:last-child {
 }
 
 @media (max-width: 700px) {
-  .gallery img, main img, section img {
+  .gallery img, .gallery video, main img, section img {
     width: 98vw;
-    height: auto;
     max-width: 98vw;
+    height: auto;
   }
   .hero {
     height: 220px;
@@ -646,56 +655,13 @@ main {
 .section-card,
 #welcome,
 #contactForm,
-#testimonyForm {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.bank-details {
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: #f9f9f9;
-  text-align: left;
-}
-
-.online-giving {
-  margin: 2rem auto;
-  max-width: 500px;
-  padding: 1.5rem;
-  border: 1px solid #e0e7ff;
-  border-radius: 10px;
-  background: #f8fafc;
-  text-align: left;
-}
-
+#testimonyForm,
+.bank-details,
+.online-giving,
 .partnership {
-  margin: 2rem auto;
-  max-width: 500px;
-  padding: 1.5rem;
-  border: 1px solid #f9d923;
-  border-radius: 10px;
-  background: #fffbe6;
-  text-align: left;
-}
-
-.partnership ul {
-  margin: 0 0 1rem 1.2rem;
-  padding: 0;
-  list-style: disc;
-}
-
-.partnership a {
-  text-decoration: none;
-  color: #1e3d59;
-  font-weight: 500;
-}
-
-.partnership a:hover {
-  text-decoration: underline;
+  max-width: 90vw;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-content {
@@ -710,7 +676,8 @@ main {
 }
 .footer-content > div {
   flex: 1 1 180px;
-  min-width: 180px;
+  min-width: 0;
+  max-width: 100%;
   margin-bottom: 18px;
 }
 .footer-content h4 {
@@ -758,5 +725,46 @@ main {
   .footer-map iframe {
     max-width: 100%;
     height: 120px;
+  }
+}
+
+/* Responsive images and videos */
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-card,
+.welcome,
+nav ul li a,
+.cta-btn,
+ul,
+ul li,
+footer,
+.footer-content p,
+.footer-content a,
+.footer-content h4 {
+  font-size: 1rem; /* 16px for body text and most elements */
+}
+
+.section-card h2,
+.welcome h2,
+.hero-overlay h2 {
+  font-size: 2.2rem; /* Large headings remain bold and clear */
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 15px; /* Slightly smaller but still readable on mobile */
+  }
+  .section-card h2,
+  .welcome h2,
+  .hero-overlay h2 {
+    font-size: 1.3rem;
+  }
+  nav ul li a {
+    font-size: 1.1rem;
   }
 }
