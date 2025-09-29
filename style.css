@@ -31,6 +31,10 @@ header h1 {
   text-shadow: 0 2px 8px #1e3d59;
 }
 
+nav {
+  position: relative;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -58,6 +62,19 @@ nav ul li a {
 nav ul li a:hover, nav ul li a.active {
   color: #fff;
   border-bottom: 2px solid #fff;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #f9d923;
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  z-index: 200;
+  cursor: pointer;
 }
 
 .hero {
@@ -175,10 +192,22 @@ footer {
   color: #fff;
 }
 
+.footer-content > div {
+  flex: 1 1 180px;
+  min-width: 180px;
+  margin-bottom: 18px;
+}
+
 .footer-content h4,
 .footer-content p,
 .footer-content a {
   color: #fff;
+}
+
+.footer-content h4 {
+  margin-bottom: 8px;
+  color: #f9d923;
+  font-size: 1.1rem;
 }
 
 .footer-nav a {
@@ -456,6 +485,43 @@ ul li:last-child {
   .welcome, .section-card {
     padding: 18px 4px 18px 4px;
     margin: 12px auto;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: #1e3d59;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100vw;
+    box-shadow: 0 4px 24px rgba(30,61,89,0.13);
+    padding: 18px 0;
+    z-index: 100;
+  }
+  .nav-list.nav-open {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  nav ul li {
+    display: block;
+    margin: 12px 0;
+    text-align: center;
+  }
+  nav ul li a {
+    font-size: 1.2rem;
+    color: #f9d923;
+    background: none;
+    border-radius: 0;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    background: none;
   }
 }
 
